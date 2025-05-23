@@ -21,12 +21,12 @@ class Copy_class {
 
 		//events
 		document.addEventListener('keydown', (event) => {
-			var code = event.key.toLowerCase();
+			var code = event.code;
 			var ctrlDown = event.ctrlKey || event.metaKey;
 			if (this.Helper.is_input(event.target))
 				return;
 
-			if (code == "c" && ctrlDown == true) {
+			if (code == "KeyC" && ctrlDown == true) {
 				//copy to clipboard
 				this.copy_to_clipboard();
 			}

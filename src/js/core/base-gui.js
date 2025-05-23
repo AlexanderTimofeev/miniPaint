@@ -70,7 +70,7 @@ class Base_gui_class {
 	}
 
 	init() {
-		this.load_modules();
+		this.load_modules(); 
 		this.load_default_values();
 		this.render_main_gui();
 		this.init_service_worker();

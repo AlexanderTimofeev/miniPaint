@@ -40,16 +40,16 @@ class Base_state_class {
 
 	set_events() {
 		document.addEventListener('keydown', (event) => {
-			const key = (event.key || '').toLowerCase();
+			const key = event.code;
 			if (this.Helper.is_input(event.target))
 				return;
 
-			if (key == "z" && (event.ctrlKey == true || event.metaKey)) {
+			if (key == "KeyZ" && (event.ctrlKey == true || event.metaKey)) {
 				// Undo
 				this.undo();
 				event.preventDefault();
 			}
-			if (key == "y" && (event.ctrlKey == true || event.metaKey)) {
+			if (key == "KeyY" && (event.ctrlKey == true || event.metaKey)) {
 				// Redo
 				this.redo();
 				event.preventDefault();

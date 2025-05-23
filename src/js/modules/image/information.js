@@ -25,11 +25,11 @@ class Image_information_class {
 
 	set_events() {
 		document.addEventListener('keydown', (event) => {
-			var code = event.key.toLowerCase();
+			var code = event.code;
 			if (this.Helper.is_input(event.target))
 				return;
 
-			if (code == "i") {
+			if (code == "KeyI") {
 				this.information();
 				event.preventDefault();
 			}

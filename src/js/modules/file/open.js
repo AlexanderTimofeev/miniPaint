@@ -55,11 +55,11 @@ class File_open_class {
 			e.preventDefault();
 		};
 		document.addEventListener('keydown', (event) => {
-			var code = event.key.toLowerCase();
+			var code = event.code;
 			if (this.Helper.is_input(event.target))
 				return;
 
-			if (code == "o") {
+			if (code == "KeyO") {
 				//open
 				this.open_file();
 				event.preventDefault();
